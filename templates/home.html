@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <title>Cyberbullying detection</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+   
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous">
+    </script>
+ 
+  </head>
+  <body>
+    
+    <!-- prloader start  -->
+    <div id="spinner-wrapper">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+
+    <!-- prloader End  -->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="">
+              <div class="header-logo">
+                <a href=""><div class="name">AntiSosh</div></a>
+                
+             </div>
+             
+            </a>
+          </div>
+          <nav class="stroke">
+            <ul id="MenuItems">
+              <li><a href="/">Home</a></li>
+              <li><a href="/result" target="_blank">Result</a></li>
+              <li><a href="/contact" target="_blank">Contact</a></li>
+              <li>
+                <select name="" id="search" onchange="location = this.value;">
+                  <option value="">Cyberbullying detector</option>
+                  <option value="/login">Login</option>
+                  <option value="/regdoc">Doctor Sign Up</option>
+                  <option value="/reguser">User Sign Up</option>
+                </select>
+            </ul>
+          </nav>
+          <img loading="lazy"
+            src="/static/menu.png"
+            alt=""
+            class="menu-icon"
+            onclick="menutoggle()" />
+        </div>
+
+     
+<section id="Home">
+ 
+        <div class="row">
+            <div class="col-2">
+                <img loading="lazy" src="https://imagevars.gulfnews.com/2020/09/23/Cyberbullying_174baf0fdff_original-ratio.gif" width="500" alt="heartdisese" />
+              </div>
+          <div class="col-2">
+            <h1>AntiSosh-Cyberbullying Predictor</h1>
+            <p>
+                The first line of defense against cyberbullying could be you.
+            </p>
+            <br />
+            <p>
+                Cyberbullying is bullying with the use of digital technologies. It can take place on social media, messaging platforms, gaming platforms and mobile phones. It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted. Examples include:
+
+                spreading lies about or posting embarrassing photos or videos of someone on social media
+                sending hurtful, abusive or threatening messages, images or videos via messaging platforms
+                impersonating someone and sending mean messages to others on their behalf or through fake accounts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+    <!-- Scroll Up Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa fa-chevron-circle-up"></i>
+    </button>
+
+    <!-- Features -->
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2">
+          <h2 style="color: rgb(21, 3, 88)">Are you having any of these problems ?</h2>
+          <p>
+    
+            When bullying happens online it can feel as if you’re being attacked everywhere, even inside your own home. It can seem like there’s no escape. The effects can last a long time and affect a person in many ways:
+
+            <ul>
+            <li>
+                Mentally – feeling upset, embarrassed, stupid, even afraid or angry 
+            </li>
+            <li>
+                Emotionally – feeling ashamed or losing interest in the things you love
+            </li>
+            <li>Physically – tired (loss of sleep), or experiencing symptoms like stomach aches and headaches </li>
+            </ul> 
+          </p>
+        </div>
+        <div class="col-2">
+          <img loading="lazy"  width="650" src="https://www.nea.org/sites/default/files/styles/1920wide/public/2022-09/cyber-bullying.jpeg?itok=iVpZp2Dp" />
+        </div>
+      </div>
+    </div>
+
+    <div class="small-container">
+      <div class="row">
+        <div class="col-4">
+          <h3>Becoming Antisocial</h3>
+          <br />
+          <p>
+            Uneasy, nervous or scared about going to school or outside
+          </p>
+        </div>
+        <div class="col-4">
+          <h3>Upset or frustrated</h3>
+          <br />
+          <p>Outburst of anger to distance themselves from bullies</p>
+          <br />
+        </div>
+        <div class="col-4">
+          <h3>Loss of interest</h3>
+          <br />
+          <p>
+            Losing interest in favorite hobbies or activities
+          </p>
+          <br />
+        </div>
+        <div class="col-4">
+          <h3>Uneven sleep</h3>
+          <br />
+          <p>
+            Trouble sleeping at night or sleepy during the day
+          </p>
+          <br />
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Prevention -->
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2">
+          <h2 style="color: rgb(21, 3, 88)">Prevention of Cyberbulying</h2>
+          <p>
+            The success of vaccines is strongly influenced by the strength of
+            the body's immune system. Therefore, there are several things that
+            can be tried to make the COVID-19 vaccine work :
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="prep">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img loading="lazy" src="https://www.verywellmind.com/thmb/Bt0h2Nj36Xrm4puvkTNZVjQ7Qkg=/1500x844/smart/filters:no_upscale()/cyberbullying-and-depression-1066791_final_logo-e3c3fe42e9fd464889fb4227eec96b40.gif" alt="" />
+          </div>
+          <div class="col-2">
+            <div class="prat col-md-6">
+              <div class="icon-box">
+                <!-- <i class="fa fa-check-square"></i> -->
+                <h4>
+                  <i class="fa fa-times-circle" style="font-size: 40px"></i
+                  >&nbsp Be thoughtful about what we share or say<i
+                    class="last fa fa-heart"
+                    style="font-size: 20px"
+                  ></i>
+                </h4>
+              </div>
+            </div>
+            <div class="prat col-md-6 mt-4 mt-md-0">
+              <div class="icon-box">
+                <i class="icofont-chart-bar-graph"></i>
+                <h4>
+                  <i class="fa fa-times-circle" style="font-size: 40px"></i
+                  >&nbsp Completely block people<i
+                    class="last fa fa-heart"
+                    style="font-size: 20px"
+                  ></i>
+                </h4>
+              </div>
+            </div>
+            <div class="prat col-md-6 mt-4 mt-md-0">
+              <div class="icon-box">
+                <h4>
+                  <i class="fa fa-bar-chart" style="font-size: 40px"></i>&nbsp
+                  Report hurtful comments, messages, photos<i
+                    class="last fa fa-heart"
+                    style="font-size: 20px"
+                  ></i>
+                </h4>
+              </div>
+            </div>
+            <div class="prat col-md-6 mt-4 mt-md-0">
+              <div class="icon-box">
+                <i class="icofont-settings"></i>
+                <h4>
+                  <i class="fa fa-check-circle" style="font-size: 40px"></i
+                  >&nbsp Reach out to a counsellor<i
+                    class="last fa fa-heart"
+                    style="font-size: 20px"
+                  ></i>
+                </h4>
+              </div>
+            </div>
+            <div class="prat col-md-6 mt-4 mt-md-0">
+              <div class="icon-box">
+                <i class="icofont-settings"></i>
+                <h4>
+                  <i class="fa fa-check-circle" style="font-size: 40px"></i
+                  >&nbsp Speak to a trusted adult<i
+                    class="last fa fa-heart"
+                    style="font-size: 20px"
+                  ></i>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <section id="end">
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Would be coming soon!</p>
+            <div class="app-logo">
+              <a
+                href="#"
+                ></a>
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <h1>Cyberbullying Predictor</h1>
+            <p>Our goal is to help the world free from cyberbullying.</p>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><i class="fa fa-facebook-square"></i> Facebook</li>
+              <li><i class="fa fa-twitter-square"></i>    Twitter</li>
+              <li><i class="fa fa-instagram"></i> Instagram</li>
+              <li><i class="fa fa-youtube-play"></i> YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">
+          <i class="fa fa-copyright"></i> Copyright 2022 - All rights reserved -
+          Made with
+          <i class="fa fa-heart" aria-hidden="true" style="color: red"></i
+          >&nbsp; for people across globe
+        </p>
+      </div>
+    </div>
+
+</section>
+  
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <!-- Script for Scroll Button -->
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    
+    
+    <script>
+      //Preloader Start
+      $(document).ready(function () {
+
+        preloaderFadeOutTime = 3000;
+
+        function hidePreloader() {
+          var preloader = $('#spinner-wrapper');
+          preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+      });
+
+
+    </script>
+    
+    
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+</html>
